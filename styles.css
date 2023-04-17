@@ -1,0 +1,236 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.contenedor {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #4b6fd1;
+}
+
+.texto {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 14%;
+    top: 20%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #4b6fd1;
+}
+
+.texto::placeholder {
+    color: blue;
+}
+
+.texto:active,
+.texto:focus {
+    border: none;
+    outline: none;
+}
+
+.terminos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.terminos p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: darkgrey;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.boton {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    gap: 10px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 83%;
+}
+
+.btn-encriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: darkgreen;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+.btn-descencriptar {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background: #d8dfe8;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #0a3871;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-encriptar:hover,
+.btn-descencriptar:hover {
+    margin: 0.5%;
+    width: 24%;
+    padding: 1.5%;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: #fff;
+    box-shadow: 0px 24px 32px --8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.mensaje-encrip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    text-align: center;
+}
+
+.mensaje-encrip h2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    width: 60%;
+    line-height: 120%;
+    text-align: center;
+    color: #343a40;
+}
+
+.mensaje-encrip p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    width: 80%;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+.resultado img {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+}
+
+/* Diseño Responsive */
+@media (max-width: 57.5em) {
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .datos {
+        width: 100%;
+    }
+
+    .texto {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .terminos {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+
+    .terminos p {
+        font-size: 16px;
+    }
+
+    .boton {
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .btn-encriptar,
+    .btn-descencriptar {
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .btn-encriptar:hover,
+    .btn-descencriptar:hover {
+        width: 47%;
+        padding: 1.8%;
+        margin: 0.3%;
+    }
+
+    .resultado {
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+
+    .mensaje-encrip {
+        width: 100%;
+        top: 5%;
+    }
+
+    .resultado img {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+}
